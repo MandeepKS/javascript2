@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="module" src="/src/js/index.mjs"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/076a43e25b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/dist/css/index.css">
     <title>Feed</title>
 </head>
@@ -56,13 +59,19 @@
                                         >@deepKS
                                     </a>
                                     <p class="card-subtitle fw-light">Now</p>
+                                    <button id="userPostButton" aria-label="Edit Post" class="btn btn-outline-primary" data-ol-has-click-handler=""><i class="fa-solid fa-ellipsis-vertical"></i></button>
                                 </div>
+                    
                                 <div class="row">
                                     <div class="col">
-                                        <textarea class="form-control ms-2 mt-2 border-0" rows="2" id="comment" placeholder="Give us an update!" name="text"></textarea>
-                                        <div class="col d-flex justify-content-end mt-2">
-                                            <button type="button" class="btn btn-primary fw-bold rounded-5 shadow-md">Post</button>
-                                        </div>
+                                        <form id="create-post">
+                                            <textarea class="form-control ms-2 mt-2 border-0" rows="2" id="comment" placeholder="Give us an update!" name="body" required></textarea>
+                                            <div class="col d-flex justify-content-end mt-2">
+                                                <label for="media" class="form-label" hidden="hidden">Media</label>
+                                                <input type="url" class="form-control rounded-5 ms-2" id="postMedia"  pattern="https://.*" size="30"  name="media" placeholder="Media url" >
+                                                <button type="submit" class="btn btn-primary fw-bold rounded-5 ms-2 shadow-md">Post</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>    
                             </div>
@@ -86,85 +95,9 @@
                             </div> 
                         </div>
                     </nav>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            <div class="row flex-row">
-                                <div class="col-auto">
-                                    <img src="https://i.pravatar.cc/150?img=5" alt="profile" class = "rounded-circle"  height="50px">
-                                </div>
-                                <div class="col">
-                                    <a
-                                        href="/profile/"
-                                        class="card-title lead fw-bold text-decoration-none"
-                                        >Štefan Štefančík
-                                    </a>
-                                    <p class="card-subtitle fw-light">Feb 27th, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>I love to watch Bollywood movies!!!</p>
-                        </div>
-                    </div>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            <div class="row flex-row">
-                                <div class="col-auto">
-                                    <img src="https://i.pravatar.cc/150?img=36" alt="profile" class = "rounded-circle" height="50px">
-                                </div>
-                                <div class="col">
-                                    <a
-                                        href="/profile/"
-                                        class="card-title lead fw-bold text-decoration-none"
-                                        >Sohni Kudi
-                                    </a>
-                                    <p class="card-subtitle fw-light">Feb 14th, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>Pehle lalkare naal mai dar ggye. Duje lalkare naal ander bad gye.</p>
-                        </div>
-                    </div>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            <div class="row flex-row">
-                                <div class="col-auto">
-                                    <img src="https://i.pravatar.cc/150?img=2" alt="profile" class = "rounded-circle" height="50px">
-                                </div>
-                                <div class="col">
-                                    <a
-                                        href="/profile/"
-                                        class="card-title lead fw-bold text-decoration-none"
-                                        >Jatt Boyz
-                                    </a>
-                                    <p class="card-subtitle fw-light">Feb 14th, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>Kida mitra ki haal a???</p>
-                        </div>
-                    </div>
-                    <div class="card mt-3">
-                        <div class="card-header">
-                            <div class="row flex-row">
-                                <div class="col-auto">
-                                    <img src="https://i.pravatar.cc/150?img=2" alt="profile" class = "rounded-circle" height="50px">
-                                </div>
-                                <div class="col">
-                                    <a
-                                        href="/profile/"
-                                        class="card-title lead fw-bold text-decoration-none"
-                                        >Jatt Boyz
-                                    </a>
-                                    <p class="card-subtitle fw-light">Feb 14th, 2024</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <p>O kida</p>
-                        </div>
+    
+                    <div id="feed-posts">
+                        <!-- Posts will render here dynamically!! -->
                     </div>
                 </div>
             </div>
