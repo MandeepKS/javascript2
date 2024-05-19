@@ -2,8 +2,11 @@
 *  APIs imported here!!!
 */
 
+import { getPosts } from "./api/auth/posts/fetchPost.mjs";
+import { createPostFormListner } from "./handler/createPost.mjs";
 import { loginFormListner } from "./handler/login.mjs";
 import { signUpFormListner } from "./handler/register.mjs";
+import { postTemplate } from "./templates/post.mjs";
 
 // import { API_SOCIAL_URL } from "./api/constants";
 // import { API_REGISTER_URL } from "./api/register";
@@ -14,10 +17,13 @@ export async function router(){
 
     // switch (urlPath) {
     //     case "/":
-    //         console.log("Home page");
+    //         loginFormListner();
     //         break;
     //     case "/register":
-    //         signUpForm();
+    //         signUpFormListner();
+    //         break;
+    //        case "/feed":
+    //         
     //         break;
     //     default:
     //         break;
@@ -27,6 +33,10 @@ export async function router(){
     }
     if(urlPath === "/register" || urlPath === "/register/index.html"){
         signUpFormListner();
+    }
+    if(urlPath === "/feed/" || urlPath === "/feed/index.html"){
+        createPostFormListner();
+        postTemplate();
     }
 }
 
