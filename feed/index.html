@@ -17,26 +17,6 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="/profile/">SocialSphere</a>
             <!-- Links -->
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <form class="justify-content-end">
-                        <div class="input-group d-flex">
-                            <input
-                                type="text"
-                                class="form-control form-control-sm "
-                                placeholder="Search"
-                                aria-label="Search" />
-                            <div class="input-group-append d-none d-sm-block">
-                                <button
-                                    class="ms-1 btn btn-sm btn-outline-primary"
-                                    type="button">
-                                    Search
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </li>
-            </ul>
         </div>
       
       </nav>
@@ -59,7 +39,6 @@
                                         >@deepKS
                                     </a>
                                     <p class="card-subtitle fw-light">Now</p>
-                                    <button id="userPostButton" aria-label="Edit Post" class="btn btn-outline-primary" data-ol-has-click-handler=""><i class="fa-solid fa-ellipsis-vertical"></i></button>
                                 </div>
                     
                                 <div class="row">
@@ -90,12 +69,59 @@
                                     </a>
                                 </div>
                             </div>
+                            <form id="searchForm">
+                                <div class="input-group d-flex me-3">
+                                    <input
+                                        type="text"
+                                        id="searchInput"
+                                        class="form-control form-control-sm rounded-5 border-0"
+                                        placeholder="Search"
+                                        aria-label="Search" />
+                                    <div class="input-group-append d-none d-sm-block">
+                                        <button
+                                            class="ms-1 btn btn-sm btn-outline-primary me-4 rounded-5"
+                                            type="submit">
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                             <div class="dropdown me-3">
-                                <button class="btn btn-outline-primary rounded-5 dropdown-toggle" type="button" data-toggle="dropdown">SORT
+                                <button class="btn btn-outline-primary rounded-5 dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">SORT
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" id = "withmediaposts">With media posts</a></li>
+                                        <li><a class="dropdown-item" id="allposts">All posts</a></li>
+                                      </ul>
                             </div> 
                         </div>
                     </nav>
-    
+                    <!-- <div class="card mt-3">
+                        <div class="card-header">
+                            <div class="row flex-row">
+                                <div class="col-auto">
+                                    <img src="https://i.pravatar.cc/150?img=5" alt="profile" class = "rounded-circle"  height="50px">
+                                </div>
+                                <div class="col">
+                                    <a
+                                        href="/profile/"
+                                        class="card-title lead fw-bold text-decoration-none"
+                                        >Štefan Štefančík
+                                    </a>
+                                    
+                                        <button id="userPostButton" aria-label="Edit Post" class="btn btn-outline-secondary border-0 float-end" data-bs-toggle="dropdown"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/edit">Edit</a></li>
+                                        <li><a class="dropdown-item" href="/delete">Delete</a></li>
+                                        <li><a class="dropdown-item" href="/comment">Comment</a></li>
+                                      </ul>
+                                      <p class="card-subtitle fw-light">Feb 27th, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>I love to watch Bollywood movies!!!</p>
+                        </div>
+                    </div> -->
                     <div id="feed-posts">
                         <!-- Posts will render here dynamically!! -->
                     </div>

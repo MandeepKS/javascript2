@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+    <script type="module" src="/src/js/index.mjs"></script>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/076a43e25b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/dist/css/index.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/profile/">SocialSphere</a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form class="justify-content-end">
+                        <div class="input-group d-flex">
+                            <input
+                                type="text"
+                                class="form-control form-control-sm "
+                                placeholder="Search"
+                                aria-label="Search" />
+                            <div class="input-group-append d-none d-sm-block">
+                                <button
+                                    class="ms-1 btn btn-sm btn-outline-primary"
+                                    type="button">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+      
+      </nav>
+    <div class="px-4 py-5 px-md-5 profile-bg">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-lg-8 col-sm-10 col-md-12">
+                    <h3></h3>
+                    <div class="card">
+                        <div class="card-header">
+                             <h5>Edit Post</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                               
+                                <div class="col">
+                                
+                                <div class="row">
+                                    <div class="col">
+                                        <form id="edit-post">
+                                            <!-- Title -->
+                                            <label for="title" class="form-label" aria-label="title">Title:</label>
+                                            <input type="text" class="form-control rounded-5 ms-2" id="updateTextinput"  name="title">
+                                            
+                                            <!-- Message body -->
+                                            <label for="body" class="form-label">Message:</label>
+                                            <textarea class="form-control ms-2 mt-2 rounded-5" rows="2" id="updateTextbox" placeholder="Give us an update!" name="body" required></textarea>
+                                            
+                                            <!-- Media -->
+                                            <label for="media" class="form-label">Media:</label>
+                                            <div class="col d-flex justify-content-end mt-2">
+                                                <input type="url" class="form-control rounded-5 ms-2" id="updateMedia"  pattern="https://.*" size="30"  name="media" placeholder="Media url" >
+                                                <button type="submit" class="btn btn-primary fw-bold rounded-5 ms-2 shadow-md">Update</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <footer>
+        <nav class="navbar navbar-expand-sm fixed-bottom  bg-light d-flex justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="/feed"><i class="bi bi-plus-circle-fill"></i> Feed</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>   
+</body>
+</html>
+            
