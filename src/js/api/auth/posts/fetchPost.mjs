@@ -28,7 +28,7 @@ export async function getPosts() {
 //Fetch a  single post by id 
 export async function getPost(id) {
     try {
-        const getPostsURL = `${API_SOCIAL_URL}${action}/${id}`;
+        const getPostsURL = `${API_SOCIAL_URL}${action}/${id}?${author}`;
         const response = await authFetch(getPostsURL,{
             method : 'GET',
         });
