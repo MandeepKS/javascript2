@@ -20,19 +20,6 @@ export async function router(){
     
     const urlPath = location.pathname;
 
-    // switch (urlPath) {
-    //     case "/":
-    //         loginFormListner();
-    //         break;
-    //     case "/register":
-    //         signUpFormListner();
-    //         break;
-    //        case "/feed":
-    //         
-    //         break;
-    //     default:
-    //         break;
-    // }
     if( urlPath === "/" || urlPath === "/index.html"){
        loginFormListner();
     }

@@ -21,7 +21,7 @@ export async function register(profile) {
       alert("Register failed: " + result.errors[0].message);
     }else{
       alert('User register sucessfully, Redirecting to login page!');
-      window.location.href = "/index";
+      window.location.href = "/index.html";
     }
 
   } catch (error) {
