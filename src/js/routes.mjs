@@ -23,7 +23,7 @@ export async function router(){
     if( urlPath === "/" || urlPath === "/index.html"){
        loginFormListner();
     }
-    if(urlPath === "/register" || urlPath === "/register/index.html"){
+    if(urlPath === "/register/" || urlPath === "/register/index.html"){
         signUpFormListner();
     }
     if(urlPath === "/feed/" || urlPath === "/feed/index.html"){
