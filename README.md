@@ -56,7 +56,7 @@ I would like to extend my gratitude and acknowledge the following resources and 
 
 - **Bootstrap Icons**: The icons used in this project are sourced from [Bootstrap Icons](https://icons.getbootstrap.com/), which provided an excellent set of visuals to enhance the user interface.
 
-- **Unsplash Images**: Many thanks to [Unsplash.com](https://unsplash.com/) for providing high-quality, royalty-free images that have been used throughout this project. The placeholder images and background visuals are particularly sourced from here.
+- **Unsplash Images**: Many thanks to [Unsplash.com](https://unsplash.com/) for providing high-quality, royalty-free images that have been used throughout this project. The background visuals are particularly sourced from here.
 
 - **Noroff Course Content**: Immense gratitude to the Noroff course content for providing the foundational knowledge and guidance throughout this project.
 
