@@ -1,6 +1,7 @@
 
 # SocialSphere 
-https://javascript2mks.netlify.app/
+![image](https://github.com/user-attachments/assets/7b263456-def6-455f-a23d-8cca0ed196cf)
+
 
 ## Description 
 SocialSphere is a text only social media where people can, make posts.
