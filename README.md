@@ -20,7 +20,7 @@ To set up the project locally, follow these steps:
 
 1.  Clone the repository
     ```bash
-    git clone [Javascript2](https://github.com/MandeepKS/javascript2.git)
+    git clone https://github.com/MandeepKS/javascript2
     ```
 
 2.  Navigate to the project directory
