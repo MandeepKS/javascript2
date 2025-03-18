@@ -61,3 +61,6 @@ I would like to extend my gratitude and acknowledge the following resources and 
 - **Noroff Course Content**: Immense gratitude to the Noroff course content for providing the foundational knowledge and guidance throughout this project.
 
 - **Classmates and Discord Server**: A special thanks to my classmates and the members of our Discord server for their continuous support, insights, and valuable discussions.
+
+## Demo Link
+https://javascript2mks.netlify.app/
